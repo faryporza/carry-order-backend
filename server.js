@@ -19,6 +19,9 @@ const io = new Server(httpServer, {
   },
 });
 
+// เพิ่มให้ controllers เข้าถึง io ได้
+app.set("io", io);
+
 // Middleware
 app.use(
   cors({
